@@ -37,6 +37,7 @@
             // p1ScoreLabel
             // 
             this.p1ScoreLabel.AutoSize = true;
+            this.p1ScoreLabel.BackColor = System.Drawing.Color.Transparent;
             this.p1ScoreLabel.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.p1ScoreLabel.ForeColor = System.Drawing.Color.White;
             this.p1ScoreLabel.Location = new System.Drawing.Point(21, 27);
@@ -48,6 +49,7 @@
             // p2ScoreLabel
             // 
             this.p2ScoreLabel.AutoSize = true;
+            this.p2ScoreLabel.BackColor = System.Drawing.Color.Transparent;
             this.p2ScoreLabel.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.p2ScoreLabel.ForeColor = System.Drawing.Color.White;
             this.p2ScoreLabel.Location = new System.Drawing.Point(460, 27);

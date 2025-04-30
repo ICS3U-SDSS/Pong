@@ -20,7 +20,7 @@ namespace Pong
         int player2Score = 0;
 
         int playerSpeed = 4;
-        int ballXSpeed = -6;
+        int ballXSpeed = 6;
         int ballYSpeed = 6;
 
         bool wDown = false;
@@ -101,6 +101,12 @@ namespace Pong
             if (downArrowDown == true && player2.Y < 400 - player2.Height)
             {
                 player2.Y += playerSpeed;
+            }
+
+            //check if ball hits top wall or the bottom wall
+            if(ball.Y < 0 || ball.Y > 400 - ball.Height)
+            {
+                ballYSpeed = ballYSpeed * -1;
             }
 
             Refresh(); // runs the Paint method
