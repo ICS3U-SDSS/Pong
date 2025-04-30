@@ -70,6 +70,7 @@
             this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.p2ScoreLabel);
             this.Controls.Add(this.p1ScoreLabel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

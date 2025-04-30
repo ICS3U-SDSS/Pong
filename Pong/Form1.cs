@@ -77,7 +77,33 @@ namespace Pong
 
         private void gameEngine_Tick(object sender, EventArgs e)
         {
+            //move ball
+            ball.X += ballXSpeed;
+            ball.Y += ballYSpeed;
 
+            //move player 1
+            if (wDown == true && player1.Y > 0)
+            {
+                player1.Y -= playerSpeed;
+            }
+
+            if (sDown == true && player1.Y < 400 - player1.Height)
+            {
+                player1.Y += playerSpeed;
+            }
+
+            //move player 2
+            if (upArrowDown == true && player2.Y > 0)
+            {
+                player2.Y -= playerSpeed;
+            }
+
+            if (downArrowDown == true && player2.Y < 400 - player2.Height)
+            {
+                player2.Y += playerSpeed;
+            }
+
+            Refresh(); // runs the Paint method
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
