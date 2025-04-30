@@ -45,6 +45,7 @@
             this.p1ScoreLabel.Size = new System.Drawing.Size(128, 18);
             this.p1ScoreLabel.TabIndex = 0;
             this.p1ScoreLabel.Text = "p1ScoreLabel";
+            this.p1ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // p2ScoreLabel
             // 
@@ -57,6 +58,7 @@
             this.p2ScoreLabel.Size = new System.Drawing.Size(128, 18);
             this.p2ScoreLabel.TabIndex = 1;
             this.p2ScoreLabel.Text = "p2ScoreLabel";
+            this.p2ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gameEngine
             // 

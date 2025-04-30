@@ -123,6 +123,31 @@ namespace Pong
                 ball.X = player2.X - ball.Width;
             }
 
+            //check if player missses the ball
+            if (ball.X < 0)
+            {
+                player2Score++;
+                p2ScoreLabel.Text = $"{player2Score}";
+
+                ball.X = 295;
+                ball.Y = 195;
+
+                player1.Y = 170;
+                player2.Y = 170;
+            }
+            else if (ball.X > 600 - ball.Width)
+            {
+                player1Score++;
+                p1ScoreLabel.Text = $"{player1Score}";
+
+                ball.X = 295;
+                ball.Y = 195;
+
+                player1.Y = 170;
+                player2.Y = 170;
+            }
+
+
             Refresh(); // runs the Paint method
         }
 
