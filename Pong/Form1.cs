@@ -74,4 +74,17 @@ namespace Pong
                     break;
             }
         }
+
+        private void gameEngine_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.FillRectangle(blueBrush, player1);
+            e.Graphics.FillRectangle(blueBrush, player2);
+            e.Graphics.FillRectangle(whiteBrush, ball);
+        }
+    }
 }
