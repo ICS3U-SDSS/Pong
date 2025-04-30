@@ -20,7 +20,7 @@ namespace Pong
         int player2Score = 0;
 
         int playerSpeed = 4;
-        int ballXSpeed = 6;
+        int ballXSpeed = -6;
         int ballYSpeed = 6;
 
         bool wDown = false;
@@ -107,6 +107,20 @@ namespace Pong
             if(ball.Y < 0 || ball.Y > 400 - ball.Height)
             {
                 ballYSpeed = ballYSpeed * -1;
+            }
+
+            //check if ball hits either player.
+            //If it does change the direction
+            //and place the ball in front of the player hit
+            if (player1.IntersectsWith(ball))
+            {
+                ballXSpeed *= -1;
+                ball.X = player1.X + ball.Width;
+            }
+            else if (player2.IntersectsWith(ball))
+            {
+                ballXSpeed *= -1;
+                ball.X = player2.X - ball.Width;
             }
 
             Refresh(); // runs the Paint method
