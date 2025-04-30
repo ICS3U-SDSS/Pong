@@ -104,7 +104,7 @@ namespace Pong
             }
 
             //check if ball hits top wall or the bottom wall
-            if(ball.Y < 0 || ball.Y > 400 - ball.Height)
+            if (ball.Y < 0 || ball.Y > 400 - ball.Height)
             {
                 ballYSpeed = ballYSpeed * -1;
             }
@@ -146,6 +146,21 @@ namespace Pong
                 player1.Y = 170;
                 player2.Y = 170;
             }
+
+            //check if game is over
+            if (player1Score == 3)
+            {
+                winLabel.Visible = true;
+                winLabel.Text = "Player 1 wins!!";
+                gameEngine.Enabled = false;
+            }
+            else if (player2Score == 3)
+            {
+                gameEngine.Enabled = false;
+                winLabel.Visible = true;
+                winLabel.Text = "Player 2 wins!!";
+            }
+
 
 
             Refresh(); // runs the Paint method
